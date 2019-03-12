@@ -82,20 +82,19 @@ namespace Wzorce_Czynnosciowe
             //    Console.WriteLine();
             //    onceAgain = true;
             //}
+            //ITERATOR
             ConcreteIterable concreteIterable = new ConcreteIterable();
             concreteIterable[0] = 1;
             concreteIterable[1] = 2;
             concreteIterable[2] = 3;
             IIterator iterator = concreteIterable.GetIterator();
-            var i = iterator.First();
-            while(!iterator.Current>concreteIterable)
+            Console.WriteLine(iterator.First());
+            while(!iterator.IsEnd())
             {
-                Console.WriteLine(iterator.Current());
-                i = iterator.Next();
+                Console.WriteLine(iterator.Next());                               
             }
 
-                              
-
+                             
             Console.Read();
         }
     }

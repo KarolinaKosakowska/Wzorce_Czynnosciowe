@@ -10,10 +10,12 @@ namespace Wzorce_Czynnosciowe.ITERATOR
     {
         ConcreteIterable iterable;
         int current = 0;
+
         public MyIterator(ConcreteIterable iterable)
         {
             this.iterable = iterable;
         }
+
         public object Current()
         {
             return iterable[current];
@@ -21,18 +23,20 @@ namespace Wzorce_Czynnosciowe.ITERATOR
 
         public object First()
         {
-            return iterable[0];
+           return iterable[0];
         }
 
         public bool IsEnd()
         {
-            return current < iterable.Count-1;
+            return current >= iterable.Count-1;
         }
 
         public object Next()
         {
-            if (current < iterable.Count - 1)
+            if (current < iterable.Count-1)
+
                 return iterable[++current];
+
             return null;
         }
     }
