@@ -47,6 +47,10 @@
     <Compile Include="Interpreter\Context.cs" />
     <Compile Include="Interpreter\NonterminalExpression.cs" />
     <Compile Include="Interpreter\TerminalExpression.cs" />
+    <Compile Include="ITERATOR\ConcreteIterable.cs" />
+    <Compile Include="ITERATOR\IIterable.cs" />
+    <Compile Include="ITERATOR\IIterator.cs" />
+    <Compile Include="ITERATOR\MyIterator.cs" />
     <Compile Include="MEMENTO\Memento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

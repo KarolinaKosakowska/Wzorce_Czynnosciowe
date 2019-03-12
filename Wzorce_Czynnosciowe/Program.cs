@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Wzorce_Czynnosciowe.Interpreter;
+using Wzorce_Czynnosciowe.ITERATOR;
 using Wzorce_Czynnosciowe.MEMENTO;
 using Wzorce_Czynnosciowe.STATE;
 using Wzorce_Czynnosciowe.STRATEGY;
@@ -55,34 +56,45 @@ namespace Wzorce_Czynnosciowe
             //Console.Read();
             //context.Change();
 
-            //STRATEGY
-            bool onceAgain = true;
-            while (onceAgain)
+            ////STRATEGY
+            //bool onceAgain = true;
+            //while (onceAgain)
+            //{
+            //    Console.WriteLine("Wybierz postać: A,B,C");
+            //    Console.WriteLine();
+            //    ConsoleKeyInfo figure = Console.ReadKey(true);
+            //    IFigure ifigure = null;
+            //    switch (figure.Key)
+            //    {
+            //        case ConsoleKey.A:
+            //            ifigure = new Figure1();
+            //            break;
+            //        case ConsoleKey.B:
+            //            ifigure = new Figure2();
+            //            break;
+            //        case ConsoleKey.C:
+            //            ifigure = new Figure3();
+            //            break;
+            //    }
+            //    Console.WriteLine($"Wybrałes postać: { figure.Key}");
+            //    Console.WriteLine(ifigure.Kopnięcie()[0]);
+            //    Console.WriteLine(ifigure.Uderzenie()[0]);
+            //    Console.WriteLine();
+            //    onceAgain = true;
+            //}
+            ConcreteIterable concreteIterable = new ConcreteIterable();
+            concreteIterable[0] = 1;
+            concreteIterable[1] = 2;
+            concreteIterable[2] = 3;
+            IIterator iterator = concreteIterable.GetIterator();
+            var i = iterator.First();
+            while(!iterator.Current>concreteIterable)
             {
-                Console.WriteLine("Wybierz postać: A,B,C");
-                Console.WriteLine();
-                ConsoleKeyInfo figure = Console.ReadKey(true);
-                IFigure ifigure = null;
-                switch (figure.Key)
-                {
-                    case ConsoleKey.A:
-                        ifigure = new Figure1();
-                        break;
-                    case ConsoleKey.B:
-                        ifigure = new Figure2();
-                        break;
-                    case ConsoleKey.C:
-                        ifigure = new Figure3();
-                        break;
-                }
-                Console.WriteLine($"Wybrałes postać: { figure.Key}");
-                Console.WriteLine(ifigure.Kopnięcie()[0]);
-                Console.WriteLine(ifigure.Uderzenie()[0]);
-                Console.WriteLine();
-                onceAgain = true;
+                Console.WriteLine(iterator.Current());
+                i = iterator.Next();
             }
 
-
+                              
 
             Console.Read();
         }
