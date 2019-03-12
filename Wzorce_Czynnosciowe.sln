@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wzorce_Czynnosciowe", "Wzorce_Czynnosciowe\Wzorce_Czynnosciowe.csproj", "{81C747E1-6E40-4068-8286-C5688CB1EF0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextEditorMemento", "TextEditorMemento\TextEditorMemento.csproj", "{46140E79-0BB0-4D06-88CE-02C8A669FB9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{81C747E1-6E40-4068-8286-C5688CB1EF0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81C747E1-6E40-4068-8286-C5688CB1EF0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81C747E1-6E40-4068-8286-C5688CB1EF0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46140E79-0BB0-4D06-88CE-02C8A669FB9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46140E79-0BB0-4D06-88CE-02C8A669FB9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46140E79-0BB0-4D06-88CE-02C8A669FB9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46140E79-0BB0-4D06-88CE-02C8A669FB9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
