@@ -50,9 +50,18 @@
     <Compile Include="MEMENTO\Memento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="STATE\BigState.cs" />
+    <Compile Include="STATE\Context.cs" />
+    <Compile Include="STATE\SmallState.cs" />
+    <Compile Include="STATE\State.cs" />
+    <Compile Include="STRATEGY\Figure1.cs" />
+    <Compile Include="STRATEGY\Figure2.cs" />
+    <Compile Include="STRATEGY\Figure3.cs" />
+    <Compile Include="STRATEGY\IFigure.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
