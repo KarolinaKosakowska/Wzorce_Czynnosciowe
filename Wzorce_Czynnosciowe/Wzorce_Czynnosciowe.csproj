@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chain of responsibiity\ConcreteHandler1.cs" />
+    <Compile Include="Chain of responsibiity\ConcreteHandler2.cs" />
+    <Compile Include="Chain of responsibiity\ConcreteHandler3.cs" />
+    <Compile Include="Chain of responsibiity\Handler.cs" />
     <Compile Include="Interpreter\AbstractExpression.cs" />
     <Compile Include="Interpreter\Context.cs" />
     <Compile Include="Interpreter\NonterminalExpression.cs" />
@@ -52,6 +56,10 @@
     <Compile Include="ITERATOR\IIterator.cs" />
     <Compile Include="ITERATOR\MyIterator.cs" />
     <Compile Include="MEMENTO\Memento.cs" />
+    <Compile Include="OBSERVER\ConcreteObserver.cs" />
+    <Compile Include="OBSERVER\ConcreteSubject.cs" />
+    <Compile Include="OBSERVER\Observer.cs" />
+    <Compile Include="OBSERVER\Subject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="STATE\BigState.cs" />

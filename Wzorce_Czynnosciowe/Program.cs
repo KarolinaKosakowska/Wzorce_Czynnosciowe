@@ -4,9 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Wzorce_Czynnosciowe.Chain_of_responsibiity;
 using Wzorce_Czynnosciowe.Interpreter;
 using Wzorce_Czynnosciowe.ITERATOR;
 using Wzorce_Czynnosciowe.MEMENTO;
+using Wzorce_Czynnosciowe.OBSERVER;
 using Wzorce_Czynnosciowe.STATE;
 using Wzorce_Czynnosciowe.STRATEGY;
 
@@ -83,18 +85,43 @@ namespace Wzorce_Czynnosciowe
             //    onceAgain = true;
             //}
             //ITERATOR
-            ConcreteIterable concreteIterable = new ConcreteIterable();
-            concreteIterable[0] = 1;
-            concreteIterable[1] = 2;
-            concreteIterable[2] = 3;
-            IIterator iterator = concreteIterable.GetIterator();
-            Console.WriteLine(iterator.First());
-            while(!iterator.IsEnd())
+            //ConcreteIterable concreteIterable = new ConcreteIterable();
+            //concreteIterable[0] = 1;
+            //concreteIterable[1] = 2;
+            //concreteIterable[2] = 3;
+            //IIterator iterator = concreteIterable.GetIterator();
+            //Console.WriteLine(iterator.First());
+            //while(!iterator.IsEnd())
+            //{
+            //    Console.WriteLine(iterator.Next());                               
+            //}
+
+            // OBSERVATOR
+            //ConcreteSubject concreteSubject = new ConcreteSubject();
+            //concreteSubject.Attach(new ConcreteObserver(concreteSubject, "Pierwszy"));
+            //concreteSubject.Attach(new ConcreteObserver(concreteSubject, "Drugi"));
+            //var third = new ConcreteObserver(concreteSubject, "trzeci");
+            //concreteSubject.Attach(third);
+            //concreteSubject.SubjectState = "Super stan";
+            //concreteSubject.Notify();
+            //concreteSubject.Detach(third);
+            //concreteSubject.Notify();
+
+            //Chain
+            Handler h1 = new ConcreteHandler1();
+            Handler h2 = new ConcreteHandler2();
+            Handler h3 = new ConcreteHandler3();
+            h1.SetSuccessor(h2);
+            h2.SetSuccessor(h3);
+
+            int[] request = { 1, 2, 3, 10,11,22,25 };
+            foreach (var item in request)
             {
-                Console.WriteLine(iterator.Next());                               
+                h3.HandleRequest(item);
             }
 
-                             
+
+                  
             Console.Read();
         }
     }
